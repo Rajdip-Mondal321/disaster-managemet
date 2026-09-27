@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for the Disaster Management System. Information on data collection, client-side geolocation handling, and our strict zero-retention policy.">
+  <title>Privacy Policy | Disaster Management System</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Top Emergency Quick Helpline Bar -->
+  <header class="emergency-topbar" role="region" aria-label="Emergency quick helplines">
+    <div class="emergency-topbar-inner">
+      <div class="emergency-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Emergency Quick Dial (24/7 Toll-Free)</span>
+      </div>
+      <div class="emergency-numbers">
+        <a href="tel:112" class="emergency-quicklink" title="Call National Emergency Service">
+          <span>112</span>
+          <span class="service-name">National</span>
+        </a>
+        <a href="tel:1078" class="emergency-quicklink" title="Call Disaster Management Authority">
+          <span>1078</span>
+          <span class="service-name">Disaster</span>
+        </a>
+        <a href="tel:108" class="emergency-quicklink" title="Call Emergency Ambulance">
+          <span>108</span>
+          <span class="service-name">Ambulance</span>
+        </a>
+        <a href="tel:101" class="emergency-quicklink" title="Call Fire Service">
+          <span>101</span>
+          <span class="service-name">Fire</span>
+        </a>
+        <a href="tel:100" class="emergency-quicklink" title="Call Police">
+          <span>100</span>
+          <span class="service-name">Police</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Site Navigation Header -->
+  <div class="site-header">
+    <div class="site-header-inner">
+      <a href="{{ url_for('home') }}" class="brand" aria-label="Disaster Management System Home">
+        <svg class="brand-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2L28 6.8V15.2C28 22.8 22.8 28.6 16 30C9.2 28.6 4 22.8 4 15.2V6.8L16 2Z" fill="#0f172a" stroke="#b91c1c" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M16 8V18" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="16" cy="22.5" r="1.5" fill="#ffffff"/>
+        </svg>
+        <div>
+          <span class="brand-title">Disaster Management System</span>
+          <span class="brand-tagline">Emergency Preparedness and Real-Time Hazard Guidance</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="{{ url_for('home') }}#safety-guide-section" class="nav-link">Safety Guides</a>
+        <a href="{{ url_for('home') }}#weather-section" class="nav-link">Weather &amp; Location</a>
+        <a href="{{ url_for('home') }}#contacts-section" class="nav-link">Emergency Contacts</a>
+        <a href="{{ url_for('privacy') }}" class="nav-link active">Privacy Policy</a>
+        <a href="{{ url_for('terms') }}" class="nav-link">Terms</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper" id="main-content">
+    <div class="policy-back-bar">
+      <a href="{{ url_for('home') }}" class="btn btn-secondary" style="display: inline-flex; width: auto;">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span>Back to Main Dashboard</span>
+      </a>
+    </div>
+
+    <article class="policy-card">
+      <header class="policy-header">
+        <h1 class="policy-title">Privacy Policy</h1>
+        <p class="policy-meta">Effective Date: September 2026 | Application Version: 2.1</p>
+      </header>
+
+      <div class="policy-content">
+        <section>
+          <h2>1. Overview and Core Privacy Commitment</h2>
+          <p>
+            The Disaster Management System is designed as a public safety utility providing emergency preparedness protocols and localized weather hazard monitoring. We believe that access to safety guidance during crises should not compromise personal privacy.
+          </p>
+          <p>
+            This Privacy Policy clearly describes what data is processed when you use this website, how it is handled, and confirms our strict zero-retention architecture.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Process</h2>
+          <p>We collect and process only the minimal data strictly necessary to fulfill your immediate requests:</p>
+          <ul>
+            <li>
+              <strong>Geolocation Data (Optional):</strong> When you explicitly click "Use Current Device Location", your web browser asks for your permission to share your device coordinates. If you approve this request, your latitude and longitude coordinates are read by client-side JavaScript solely to retrieve local weather readings and position the reference map.
+            </li>
+            <li>
+              <strong>City Search Queries:</strong> When you enter a city or district name into the search field, that text string is sent to our geocoding service provider to determine latitude and longitude coordinates for weather and map queries.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Zero Data Retention and Logging</h2>
+          <p>
+            We do not store, save, or log your personal location coordinates or search queries. All data processing occurs ephemerally within the single request/response cycle:
+          </p>
+          <ul>
+            <li>No database of user coordinates, IP addresses, or search terms is maintained on our servers.</li>
+            <li>No location history or usage tracking records are created or stored.</li>
+            <li>Once your browser session closes or you refresh the page, any active coordinate data held in memory is discarded.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Cookies, Analytics, and Trackers</h2>
+          <p>
+            We do not use tracking cookies, advertising identifiers, behavioral fingerprinting scripts, or third-party marketing tags. No data collected through this service is sold, rented, or monetized in any form.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Third-Party Service Providers</h2>
+          <p>
+            To deliver real-time weather and spatial positioning without requiring paid proprietary accounts, this application integrates with the following external public services:
+          </p>
+          <ul>
+            <li>
+              <strong>Open-Meteo API:</strong> Used for open geocoding and weather forecasts. Requests to Open-Meteo contain coordinate or city parameters. Open-Meteo operates under its standard privacy principles without retaining personal tracking data.
+            </li>
+            <li>
+              <strong>Google Maps Embed:</strong> Used for visual display of geographic areas. When a map is rendered, an iframe request is dispatched to Google servers according to standard web browsing protocols.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. User Control and Revocation</h2>
+          <p>
+            You can grant, deny, or revoke location permissions at any time through your web browser security settings. Disabling location access does not restrict access to our comprehensive disaster safety guides or emergency helpline directories. You can also manually search for any city without granting hardware location access.
+          </p>
+        </section>
+
+        <section>
+          <h2>7. Contact and Questions</h2>
+          <p>
+            If you have questions or concerns regarding this Privacy Policy or the security of our data practices, please contact the administrative team via our official project repository or deployment administrator.
+          </p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-top-row">
+        <div>
+          <span class="footer-brand-text">Disaster Management System</span>
+        </div>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="{{ url_for('home') }}" class="footer-link">Home</a>
+          <a href="{{ url_for('home') }}#safety-guide-section" class="footer-link">Disaster Protocols</a>
+          <a href="{{ url_for('home') }}#weather-section" class="footer-link">Hazard Monitor</a>
+          <a href="{{ url_for('home') }}#contacts-section" class="footer-link">Emergency Directory</a>
+          <a href="{{ url_for('privacy') }}" class="footer-link">Privacy Policy</a>
+          <a href="{{ url_for('terms') }}" class="footer-link">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+
+      <p class="footer-disclaimer">
+        Disclaimer: This tool provides general disaster safety guidance and is not a substitute for official emergency services. In an active life-threatening emergency, call the national emergency line (112) or your local municipal disaster helpline immediately.
+      </p>
+
+      <div class="footer-bottom-row">
+        <span>Production Ready Application for Public Emergency Preparedness</span>
+        <span>Hosted on Custom Domain Infrastructure</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
